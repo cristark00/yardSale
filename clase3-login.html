@@ -69,9 +69,19 @@
             padding: 6px;
             margin-bottom: 12px;
         }
+        .input-email{
+            margin-bottom: 22px;
+        }
         .form{
             display: flex;
             flex-direction: column;
+        }
+        .form a{
+            color: var(--hospital-green);
+            font-size: var(--sm);
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 54px;
         }
         .primary-button{
             background-color: var(--hospital-green);
@@ -84,6 +94,18 @@
             cursor: pointer;
             font-weight: bold
         }
+        .secondary-button{
+            background-color: var(--white);
+            font-size: var(--md);
+            border-radius: 8px;
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+            height: 50px;
+            width: 100%;
+            cursor: pointer;
+            font-weight: bold;
+         
+        }
         .login-button{
             margin-top: 14px;
             margin-bottom: 30px;
@@ -92,8 +114,13 @@
             .logo{
                 display: block;
             }
+          .form-container{
+            grid-template-rows: auto 1fr 55%;
         }
-
+        .signup-button{
+            align-self: end;
+        }
+    }
     </style>
 </head>
 <body>
@@ -101,18 +128,18 @@
         <div class="form-container">
             <img src="./logos/logo_yard_sale.svg" alt="log" class="logo">
 
-            <h1 class="title"> Create a new password</h1>
-            <p class="subtitle"> Enter a new password for your account</p>
-        
             <form action="/" class="form">
+                <label for="email" class="label">Email address</label>
+                <input type="text" id="email" placeholder="Platzi@example.com" class="input input-email">
+
                 <label for="password" class="label">Password</label>
                 <input type="password" id="password" placeholder="******" class="input input-password">
 
-                <label for="new-password" class="label">Password</label>
-                <input type="password" id="new-password" placeholder="******" class="input input-password">
-
-                <input type="submit" value="Confirm" class="primary-button login-button">
+                <input type="submit" value="Login" class="primary-button login-button">
+            
+                <a href="./">Forgot my password</a>
             </form>
+            <button class="secondary-button signup-button">Sign up</button>
         </div>
     </div>
 </body>
